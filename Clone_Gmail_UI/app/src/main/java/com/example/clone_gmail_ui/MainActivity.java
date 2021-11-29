@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 import com.*;
+import com.github.javafaker.Faker;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     List<ItemModel> items;
     ItemAdapter adapter;
+Faker faker= new Faker();
 
 //    Faker faker = new Faker();
 //faker.name.name();          // Tạo tên ngẫu nhiên
@@ -39,21 +41,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        items = new ArrayList<>();
+
+                items = new ArrayList<>();
        // items.add(new ItemModel(R.drawable.thumb1,"Title 1","Content 1"));
-        items.add(new ItemModel(R.drawable.thumb3,"Edurila.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
-        items.add(new ItemModel(R.drawable.thumb1,"abc2.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
-        items.add(new ItemModel(R.drawable.thumb2,"gitpp.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
-        items.add(new ItemModel(R.drawable.thumb3,"jackken.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
-        items.add(new ItemModel(R.drawable.thumb4,"yamihbn.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
-        items.add(new ItemModel(R.drawable.thumb5,"rosekk.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
-        items.add(new ItemModel(R.drawable.thumb1,"bunita.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
-        items.add(new ItemModel(R.drawable.thumb7,"sakushi.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+        items.add(new ItemModel(R.drawable.item_circle,faker.name().fullName(),faker.book().title() , faker.harryPotter().quote(), faker.date().birthday().toString().substring(11,16)));
+
 
         adapter= new ItemAdapter(items);
 
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(adapter);
+
 
 
     }

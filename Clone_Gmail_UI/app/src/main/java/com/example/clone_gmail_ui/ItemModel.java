@@ -6,6 +6,7 @@ public class ItemModel {
     private String content;
     private String subject;
     private String time;
+    private Boolean toggle;
 
     public ItemModel(int avatarResource, String title, String subject,String content,String time) {
         this.avatarResource = avatarResource;
@@ -13,6 +14,15 @@ public class ItemModel {
         this.content = content;
         this.subject = subject;
         this.time=time;
+        this.toggle=false;
+    }
+
+    public Boolean isToggle() {
+        return toggle;
+    }
+
+    public void setToggle(Boolean toggle) {
+        this.toggle = toggle;
     }
 
     public String getTime() {
