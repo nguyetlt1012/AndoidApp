@@ -42,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
         items = new ArrayList<>();
        // items.add(new ItemModel(R.drawable.thumb1,"Title 1","Content 1"));
         items.add(new ItemModel(R.drawable.thumb3,"Edurila.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
+        items.add(new ItemModel(R.drawable.thumb1,"abc2.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
+        items.add(new ItemModel(R.drawable.thumb2,"gitpp.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
+        items.add(new ItemModel(R.drawable.thumb3,"jackken.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
+        items.add(new ItemModel(R.drawable.thumb4,"yamihbn.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
+        items.add(new ItemModel(R.drawable.thumb5,"rosekk.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
+        items.add(new ItemModel(R.drawable.thumb1,"bunita.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
+        items.add(new ItemModel(R.drawable.thumb7,"sakushi.com","$19 Only(First 10 spots)-Bestselling","Are you looking to Learn Web Designing","12:00 AM"));
 
         adapter= new ItemAdapter(items);
 
